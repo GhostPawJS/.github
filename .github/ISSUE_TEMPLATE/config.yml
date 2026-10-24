@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://ghostpaw.dev/
+    about: Overview of all seven libraries, with links to each site, live demo and docs.
+  - name: Report a security vulnerability
+    url: https://github.com/GhostPawJS/.github/blob/main/SECURITY.md
+    about: Report privately through the repository's Security tab, not in a public issue.

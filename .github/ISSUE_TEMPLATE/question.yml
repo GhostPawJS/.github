@@ -1,0 +1,36 @@
+name: Question
+description: Ask how to do something after checking the docs.
+labels: [question]
+body:
+  - type: dropdown
+    id: package
+    attributes:
+      label: Package
+      options:
+        - codex
+        - questlog
+        - affinity
+        - souls
+        - grimoire
+        - email
+        - telegram
+        - not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: How do you use it?
+      multiple: true
+      options:
+        - Library import
+        - MCP server
+        - CLI
+        - Agent Skill
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What you want to do, and what you tried.
+    validations:
+      required: true

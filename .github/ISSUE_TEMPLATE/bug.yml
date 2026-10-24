@@ -1,0 +1,65 @@
+name: Bug report
+description: Something does not work as documented.
+labels: [bug, triage]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for the report. A small reproduction gets the fastest fix. For security issues, use the repository's Security tab instead.
+  - type: dropdown
+    id: package
+    attributes:
+      label: Package
+      options:
+        - codex
+        - questlog
+        - affinity
+        - souls
+        - grimoire
+        - email
+        - telegram
+        - not sure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      placeholder: "0.3.2"
+    validations:
+      required: true
+  - type: input
+    id: node
+    attributes:
+      label: Node.js version and OS
+      placeholder: "24.14.0 on Linux"
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: How do you use it?
+      multiple: true
+      options:
+        - Library import
+        - MCP server
+        - CLI
+        - Agent Skill
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Include the full error or the tool result you got.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: Minimal code, tool call or CLI command that shows the problem.
+      render: ts
